@@ -28,6 +28,6 @@ A criação de um editor de código online para postar trechos de códigos, usar
 ### Testar projeto
 Para rodar o AluraDev localmente em modo desenvolvimento você deve:
 ```
-git clone https://github.com/diegosouz4/Alura-Challenge-Front-End.git
+git clone https://github.com/Pdroh/alurachallenge-frontend-2021.git
 abrir o arquivo index.html
 ```
