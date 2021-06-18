@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Alura - Front-end</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/dracula.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/input.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/button.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/menu-icon.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/code-editor.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/user.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/modal.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/helpers.css" />
+    <link rel="stylesheet" href="./assets/css/paginas/home.css" />
+    <link rel="stylesheet" href="./assets/css/aside.css" />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+  </head>
+
+  <body>
+    <header class="header container">
+      <h1 class="header__title">
+        <a class="header__logo" href="./index.html">
+          <img src="./assets/img/logo-aluraDev.svg" alt="Logo Alura Dev" />
+        </a>
+      </h1>
+
+      <input
+        class="header__search"
+        type="search"
+        placeholder="Busque por algo"
+      />
+
+      <div class="header__icons">
+        <button id="botaoBusca" class="icon__search button button--icon">
+          <img src="./assets/img/icons/icone-search.svg" alt="busca" />
+        </button>
+        <button id="botaoMenu" class="icon__menu button button--icon">
+          <span class="icon__menu__mobile"></span>
+        </button>
+      </div>
+
+      <div class="user__container">
+        <a href="https://github.com/diegosouz4" target="_blank">
+          <div class="header__user user">
+            <div class="user__thumb"></div>
+            <h3 class="user__name">Diego Souza</h3>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <section class="home__main container">
+      <nav class="menu">
+        <h2 class="menu__title">Menu</h2>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link link--active" href="./index.html">
+              <div class="menu__icon">
+                <img
+                  src="./assets/img/icons/icon-code.svg"
+                  alt="Editor de código"
+                />
+              </div>
+              Editor de Código
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link ativo" href="./comunidade.html">
+              <div class="menu__icon">
+                <img
+                  src="./assets/img/icons/icon-community.svg"
+                  alt="Comunidade"
+                />
+              </div>
+              Comunidade
+            </a>
+          </li>
+        </ul>
+        <a href="https://github.com/diegosouz4" target="_blank">
+          <div class="menu__user user">
+            <div class="user__thumb"></div>
+            <h3 class="user__name">Diego Souza</h3>
+          </div>
+        </a>
+      </nav>
+
+      <div id="searchBar" class="main__search">
+        <input
+          type="search"
+          placeholder="Busque por algo"
+          class="search__bar"
+        />
+        <button id="closeBusca" class="search__button button button--icon">
+          <img src="./assets/img/icons/icon-close.svg" alt="fechar busca" />
+        </button>
+      </div>
+
+      <section class="editor">
+        <div id="editorContainer" class="editor__container">
+          <code
+            class="editor__code hljs"
+            contenteditable="true"
+            aria-label="editor"
+          ></code>
+          <div class="dots">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+          </div>
+        </div>
+
+        <div class="editor__export">
+          <button id="exportNav" class="export__nav">
+            <img src="./assets/img/icons/icon-save.svg" alt="exportar código" />
+          </button>
+          <div class="export__container">
+            <div class="export__content">
+              <h2 class="export__title">Salvar como:</h2>
+              <button id="exportButtonImg" class="export__button">
+                Salvar
+              </button>
+              <select id="exportSelectImg" class="export__select">
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="svg">SVG</option>
+              </select>
+            </div>
+
+            <div class="export__content">
+              <h2 class="export__title">Exportar como:</h2>
+              <button id="exportButtonCode" class="export__button">
+                Exportar
+              </button>
+              <select id="exportSelectCode" class="export__select">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">Javascript</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button id="chooseLang" class="editor__button button button--outline">
+          Visualizar com o highlight
+        </button>
+      </section>
+
+      <aside class="project">
+        <div class="project__info">
+          <h2 class="project__title">Seu projeto</h2>
+          <input
+            type="text"
+            id="project__name"
+            placeholder="Nome do seu projeto"
+            data-title
+          />
+          <textarea
+            class="input"
+            id="project__description"
+            rows="5"
+            placeholder="Descrição do projeto"
+            data-description
+          ></textarea>
+        </div>
+        <div class="project__settings">
+          <h2 class="project__title">Personalização</h2>
+          <select id="codeLang" data-codeLang>
+            <option value="Javascript">Javascript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+          </select>
+
+          <input
+            id="editorColor"
+            type="color"
+            value="#6bd1ff"
+            class="project__color"
+            data-color
+          />
+        </div>
+        <button data-save-btn class="project__button button button--fill">
+          Salvar projeto
+        </button>
+        <button
+          data-delete-btn
+          class="project__button button button--outline is--hide"
+        >
+          Deletar projeto
+        </button>
+      </aside>
+    </section>
+    <div data-modal class="modal is--hide"></div>
+    <script type="module" src="./assets/js/home.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  </body>
+</html>
