@@ -38,7 +38,7 @@ import {deletaProjeto} from './deleta_projeto.js'
     salvaProjeto(dadosDoProjeto);
     
     modalContainer.classList.remove('is--hide')
-    modalContainer.innerHTML = criaModal("Projeto Salvo!", "parabéns, você acabou de salvar o seu primeiro projeto.", "Editar projeto", `/?id=${dadosDoProjeto.id}`);
+    modalContainer.innerHTML = criaModal("Projeto Salvo!", "parabéns, você acabou de salvar o seu primeiro projeto.", "Editar projeto", `./?id=${dadosDoProjeto.id}`);
   }
 
   function pegaDados(titulo, descricao, linguagem, cor, codigo) {
