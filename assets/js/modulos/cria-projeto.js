@@ -19,7 +19,8 @@ export function criaProjeto(id, projeto) {
       `;
     });
 
-    console.log(htmlListComentarios);
+    let nomeUsuario = (projeto.descricaoProjeto.userName ? projeto.descricaoProjeto.userName : projeto.descricaoProjeto.userLogin);
+    let avatarUsuario = (projeto.descricaoProjeto.userAvatar ? projeto.descricaoProjeto.userAvatar : '');
 
     novaLi.classList.add("editor__card");
     novaLi.innerHTML = `
@@ -64,10 +65,10 @@ export function criaProjeto(id, projeto) {
           </button>
         </div>
         <div class="actions__user__container">
-          <a href="https://github.com/pdroh" target="_blank">
+          <a href="#">
             <div class="card__user user">
-              <div class="user__thumb"></div>
-              <h3 class="user__name">Pedro Henrique</h3>
+              <div class="user__thumb" style="background-image: url(${avatarUsuario})"></div>
+              <h3 class="user__name">${nomeUsuario}</h3>
             </div>
           </a>
         </div>

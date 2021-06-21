@@ -25,6 +25,14 @@
     <link rel="stylesheet" href="./assets/css/paginas/home.css" />
     <link rel="stylesheet" href="./assets/css/aside.css" />
     <link rel="stylesheet" href="./assets/css/menu.css" />
+
+    <style>
+      .swal2-modal input {
+        color: black;
+        border: 1px solid #dadada;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -51,10 +59,12 @@
       </div>
 
       <div class="user__container">
-        <a href="https://github.com/pdroh" target="_blank">
+        <a href="#">
           <div class="header__user user">
             <div class="user__thumb"></div>
-            <h3 class="user__name">Pedro Henrique</h3>
+            <h3 class="user__name">
+              <span onclick="App.logar();">Entrar</span>
+            </h3>
           </div>
         </a>
       </div>
@@ -87,10 +97,12 @@
             </a>
           </li>
         </ul>
-        <a href="https://github.com/pdroh" target="_blank">
+        <a href="#">
           <div class="menu__user user">
             <div class="user__thumb"></div>
-            <h3 class="user__name">Pedro Henrique</h3>
+            <h3 class="user__name">
+              <span onclick="App.logar();">Entrar</span>
+            </h3>
           </div>
         </a>
       </nav>
@@ -201,20 +213,13 @@
       </aside>
     </section>
     <div data-modal class="modal is--hide"></div>
+    
     <script type="module" src="./assets/js/home.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 
-    <script>
-      fetch('//api.github.com/users/pdroh')
-        .then(response => response.json())
-        .then(data => {
-
-          document.querySelector(".user__thumb").style.backgroundImage = "url("+ data.avatar_url + ")";
-
-        })
-        .catch(err => console.error(err));
-    </script>
+    <script src="./assets/miscellaneous/sweetalert2.js"></script>
+    <script src="./assets/js/auth/login.js"></script>
 
   </body>
 </html>

@@ -6,8 +6,6 @@ import {deletaProjeto} from './deleta_projeto.js'
   const valorId = checaUrl();
   const modalContainer = document.querySelector("[data-modal]");
 
-  
-
   btnSave.addEventListener("click", (e) => {
     e.preventDefalt;
 
@@ -27,6 +25,13 @@ import {deletaProjeto} from './deleta_projeto.js'
   });
 
   function validaDados(titulo, descricao, linguagem, cor, codigo) {
+
+    if(!dadosUsuario) {
+      alert("Usuário não logado!");
+      App.logar();
+      return false;
+    }
+
     if (titulo.length <= 0 || descricao.length <= 0 || codigo.length <= 0) {
       if (titulo.length <= 0) alert("Informe um título para o projeto");
       if (descricao.length <= 0) alert("Informe uma descrição para o projeto");
@@ -63,6 +68,9 @@ import {deletaProjeto} from './deleta_projeto.js'
         code: codigo,
         likes: likesAtual,
         comments: commentsAtual,
+        userName: dadosUsuario.name,
+        userLogin: dadosUsuario.login,
+        userAvatar: dadosUsuario.avatar_url
       },
     };
 

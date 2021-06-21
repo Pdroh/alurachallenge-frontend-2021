@@ -52,10 +52,12 @@
       </div>
 
       <div class="user__container">
-        <a href="https://github.com/pdroh" target="_blank">
+        <a href="#">
           <div class="header__user user">
             <div class="user__thumb"></div>
-            <h3 class="user__name">Pedro Henrique</h3>
+            <h3 class="user__name">
+              <span onclick="App.logar();">Entrar</span>
+            </h3>
           </div>
         </a>
       </div>
@@ -88,10 +90,12 @@
             </a>
           </li>
         </ul>
-        <a href="https://github.com/pdroh" target="_blank">
+        <a href="#">
           <div class="menu__user user">
             <div class="user__thumb"></div>
-            <h3 class="user__name">Pedro Henrique</h3>
+            <h3 class="user__name">
+              <span onclick="App.logar();">Entrar</span>
+            </h3>
           </div>
         </a>
       </nav>
@@ -111,12 +115,19 @@
         <ul class="editor__list" data-lista-projetos></ul>
       </section>
     </section>
+
     <script type="module" src="./assets/js/comunidade.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
     <script src="./assets/miscellaneous/moment.js"></script>
-    
+
+    <script src="./assets/miscellaneous/sweetalert2.js"></script>
+    <script src="./assets/js/auth/login.js"></script>
+
     <script>
+      
       moment.locale('pt-br');
+
     </script>
 
   </body>
