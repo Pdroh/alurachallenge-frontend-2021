@@ -6,7 +6,7 @@ Projeto desafio proposto pela Alura que tem como principal objetivo ajudar os al
  
 Recebemos um layout figma com uma base para desenvolver todo o projeto, e toda semana recebemos cards no trello com que será desenvolvido durante o tempo do evento. E durante algumas lives programavamos junto com os orientadores.
  
-Para visitar o projeto, [clique aqui](https://pdrohs.github.io/).
+Para visitar o projeto, [clique aqui](https://pdroh.github.io/alurachallenge-frontend-2021/).
  
 ## Proposta
  

@@ -3,9 +3,9 @@
   margin-bottom: 2rem;
 }
 
-.editor__card:hover .card__actions {
+.editor__card:hover .card__comments {
   opacity: 1;
-  height: 56px;
+  height: auto;
 }
 
 .editor__card:last-child {
@@ -38,8 +38,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
-  height: 0;
-  opacity: 0;
+  height: 56px;
+  opacity: 1;
   transition: all 0.4s cubic-bezier(0.42, -0.43, 0.51, 1.47);
 }
 
@@ -59,6 +59,53 @@
   font-size: 1rem;
   line-height: 24px;
   margin-left: 0.625rem;
+}
+
+.card__comments {
+  height: 0;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.42, -0.43, 0.51, 1.47);
+}
+
+.card__comments .data {
+  margin-bottom: 10px;
+}
+
+.card__comments small{
+  color: #fff;
+  font-size: 9px;
+  padding-bottom: 5px;
+}
+
+.card__comment {
+  padding: 9px;
+  margin-top: 5px;
+  color: rgb(248, 235, 163);
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.card__comentar {
+  padding: 10px;
+}
+
+.card__comentar .btn {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(77, 167, 59);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.card__comentar textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
 }
 
 @media screen and (min-width: 1024px) {

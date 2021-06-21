@@ -204,5 +204,17 @@
     <script type="module" src="./assets/js/home.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+    <script>
+      fetch('//api.github.com/users/pdroh')
+        .then(response => response.json())
+        .then(data => {
+
+          document.querySelector(".user__thumb").style.backgroundImage = "url("+ data.avatar_url + ")";
+
+        })
+        .catch(err => console.error(err));
+    </script>
+
   </body>
 </html>
