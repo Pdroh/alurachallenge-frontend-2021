@@ -116,7 +116,7 @@ import {deletaProjeto} from './deleta_projeto.js'
     e.preventDefault;
     deletaProjeto(valorId);
     modalContainer.classList.remove('is--hide')
-    modalContainer.innerHTML = criaModal("Projeto deletado!", "O projeto foi deletado com sucesso.", "Criar um projeto", "/");
+    modalContainer.innerHTML = criaModal("Projeto deletado!", "O projeto foi deletado com sucesso.", "Criar um projeto", "./");
   });
 
   modalContainer.addEventListener('click', (e) => {
