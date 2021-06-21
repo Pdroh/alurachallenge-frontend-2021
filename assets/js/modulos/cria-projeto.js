@@ -23,7 +23,7 @@ export function criaProjeto(id, projeto) {
 
     novaLi.classList.add("editor__card");
     novaLi.innerHTML = `
-    <a href="/?id=${projeto.id}"><div class="editor__container" style="background-color: ${projeto.descricaoProjeto.color};">
+    <a href="./?id=${projeto.id}"><div class="editor__container" style="background-color: ${projeto.descricaoProjeto.color};">
       <code class="editor__code hljs ${projeto.descricaoProjeto.lang}" aria-label="editor"></code>
       <div class="editor__info">
         <div class="comunidade__dots"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span></div>
