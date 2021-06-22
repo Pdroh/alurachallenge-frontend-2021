@@ -11,9 +11,12 @@ export function criaProjeto(id, projeto) {
 
     let htmlListComentarios = "";
     arrListComments.forEach(element => {
+
+      let nomeUsuario = (element.nome ? element.nome : element.login);
+
       htmlListComentarios += `
         <div class="card__comment">
-          <div class="data"><small>${element.nome} - ${element.data}</small></div class="data">
+          <div class="data"><small>${nomeUsuario} - ${element.data}</small></div class="data">
           <p>${element.comentario}</p>
         </div>
       `;
